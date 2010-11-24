@@ -1,0 +1,9 @@
+%h1 Grupy
+
+- @groups.each do |g|
+  %p
+    = link_to g.name, g 
+  %p
+
+= link_to 'Nowa grupa', new_group_path 
+

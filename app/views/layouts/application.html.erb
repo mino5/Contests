@@ -1,0 +1,54 @@
+<%= stylesheet_link_tag "style" %>
+<%= yield %>
+<div id="container">
+	<div id="header">
+		<h1>
+			Konkursy 
+		</h1>
+	</div>
+	<div id="navigation">
+		<ul>
+			<li><a href="#">Główna</a></li>
+			<li><a href="#">O stronie</a></li>
+                        <li><a href="#">Hakowanie konkursów ;)</a></li>
+			<li><a href="#">Kontakt</a></li>
+		</ul>
+	</div>
+	<div id="content-container">
+		<div id="content">
+			<h2>
+				Tu będzie strona o konkursach internetowych
+			</h2>
+			<p>
+				Lorem ipsum dolor sit amet consect etuer adipi scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna aliquam erat volut. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+			</p>
+			<p>
+				Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+			</p>
+			<p>
+			</p>
+		</div>
+		<div id="aside">
+			<h3>
+
+			<% if current_user %>
+    			<%= link_to "Edit profile", edit_user_path(current_user.id) %>
+    			<%= link_to "Logout", logout_path %>
+                        <%= link_to "Groups", groups_path %>
+                        <%= link_to "Invitations", user_invitations_path(current_user.id) %>
+  			<% else %>
+    			<%= link_to "Register", new_user_path %>
+    			<%= link_to "Log in", login_path %>
+  			<% end %>
+
+			</h3>
+			<p>
+			</p>
+		</div>
+		<div id="footer">
+			Copyright © NetKonkursy, 2010
+		</div>
+	</div>
+</div>
+
+

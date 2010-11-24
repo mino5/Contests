@@ -1,0 +1,23 @@
+%h2 Profil grupy 
+%b= "Nazwa: " + @group.name
+%p
+%b= "Opis: " + @group.description
+%p
+%b= "Admin grupy: "
+- @group_admin = User.find_by_id(@group.owner_id.to_i)
+=link_to @group_admin.username, user_path(@group_admin)
+- unless @users.empty?
+  %p
+  %b Członkowie:
+  - @group.users.each do |gu|
+    %p 
+      = link_to gu.username, gu
+
+- if @group.admin?(current_user)
+  %p
+  %b Zaproś użytkownika:
+  %p
+    = form_for @invitation, :url => invite_group_path(@group) do |f| 
+      = f.select :user_id, options_for_select(User.all.map { |u| [u.username, u.id] })
+      = f.submit 'Invite', :disabled => @users.empty?
+  %p

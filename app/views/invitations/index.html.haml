@@ -1,0 +1,17 @@
+- unless @invitations.empty?
+  %b Zaproszenia
+  - @invitations.each  do |i| 
+    %p
+    = link_to i.group.name, group_path(i.group)
+    = link_to "Zaakceptuj", accept_user_invitation_path(i.user, i) 
+- else    
+  %b Brak nowych zaproszeń
+  %p
+- unless @memberships.empty?
+  %b Jesteś członkiem następujących grup:
+  - @memberships.each do |i|
+    %p
+    = link_to i.group.name, group_path(i.group)
+- else
+  %b Nie jesteś członkiem żadnej grupy
+

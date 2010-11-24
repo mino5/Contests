@@ -1,0 +1,3 @@
+= form_for @invitations do |f|
+  = f.select(:accept, options_for_select([["Zaakceptuj", 1], ["Odrzuc", 0]]))
+  = f.submit "OK"

@@ -1,0 +1,16 @@
+<b> Login </b>
+<% form_for @user_session do |form| %>
+  <li>
+    <%= form.label :username, "Username" %>
+    <%= form.text_field :username %>
+  </li>
+  <li>
+    <%= form.label :password, "Password" %>
+    <%= form.password_field :password %>
+  </li>
+  <li>
+    <%= form.submit "Submit" %>
+  </li>
+<% end %>
+
+

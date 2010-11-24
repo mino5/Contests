@@ -1,0 +1,14 @@
+<% form_for @group do |f| %>
+  <li>
+    <%= f.label :name, "Nazwa grupy" %>
+    <%= f.text_field :name %>
+  </li>
+  <li>
+    <%= f.label :description, "Opis grupy" %>
+    <%= f.text_area :description %>
+  </li>
+  <li>
+    <%= f.submit 'Create' %>
+  </li>
+
+<% end %>
