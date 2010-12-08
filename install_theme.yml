@@ -1,0 +1,9 @@
+--- 
+image_dir: trial/images
+index_path: index.html
+content_path: 
+no_sass: false
+stylesheet_dir: public/stylesheets
+javascript_dir: public/javascripts
+partials: {}
+

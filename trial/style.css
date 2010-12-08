@@ -1,0 +1,261 @@
+/* CSS Document */
+body{
+	background:url(../images/bg.gif) repeat-x 0 0 #FFF9F2; color:#333227;
+	padding:0; margin:0;
+}
+div, p, ul, h1, h2, h3, img, form{
+	padding:0; margin:0;
+	}
+ul{
+	list-style-type:none;
+	}
+.bank{
+	line-height:0; font-size:0; clear:both;
+	}
+/*------------------------main body-------------------------*/
+#main_body{
+	width:778px;  margin:0 auto 0 auto; 
+	}
+#left_pan{
+	width:188px; background:url(../images/logo_bg.gif) no-repeat #FFF9F2; color:#fff; float:left; 
+}
+#left_pan img{
+	margin:40px 0 38px 52px; display:block;
+	}
+#left_pan h2{
+	width:73px; height:41px; background:url(../images/login_bg.gif) no-repeat 0 0; margin:0 0 0 6px; display:block;
+	font:14px/14px Arial, Helvetica, sans-serif; padding:17px 65px 0 32px; font-weight:bold; text-transform:uppercase;
+
+	}
+#left_pan h2 span{
+	font-size:24px; line-height:24px;
+	}
+#left_pan form{
+	width:148px; margin:0 0 0 0; padding:28px 0 0 23px; display:block; 
+	}
+#left_pan form input{
+	width:136px; height:17px; display:block; font:11px Arial, Helvetica, sans-serif; font-weight:bold;
+	padding:4px 0 0 12px; margin:0px 0 10px 0; 
+	}
+#left_pan form input.button{
+	width:59px; height:22px; display:block; background:url(../images/button_arrow.gif) no-repeat 0 5px #FFF9F2; color:#333227;
+	font:13px/15px Verdana, Arial, Helvetica, sans-serif; padding:0 0 0 21px; margin:0 0 10px 90px; border:none;
+	cursor:pointer; font-weight:bold;
+	}
+#left_pan form label{
+	width:132px; font:9px/13px Tahoma, Arial, Helvetica, sans-serif; color:#D43723; font-weight:bold; display:block;
+	text-transform:uppercase; background-color:#FFF9F2;
+	}
+#left_pan form a{
+	width:132px; font:11px/13px Tahoma, Arial, Helvetica, sans-serif; color:#000101; text-decoration:underline; display:block;
+	background-color:#FFF9F2;
+	}
+#left_pan form a:hover{
+	text-decoration:none;
+	}
+#left_pan ul{
+	width:126px; display:block; margin:38px 0 0 38px;
+	}
+#left_pan ul li{
+	background:url(../images/ul_arrow.gif) no-repeat 0 8px; border-bottom:#B8A997 1px dashed; padding: 0 0 0 18px;
+	}
+#left_pan ul li.li1{
+	background:url(../images/ul_arrow.gif) no-repeat 0 8px; border-bottom:none; padding: 0 0 0 18px;
+	}
+#left_pan ul li a{
+	font:13px/23px Arial, Helvetica, sans-serif; color:#4D371E; text-decoration:none; background-color:#FFF9F2;
+	}
+#left_pan ul li a:hover{
+	text-decoration:underline;
+	}
+/*-------------------------------right side--------------------*/
+#rightPan{
+	width:590px; float:left; margin:0; background:url(../images/header_pic.jpg) no-repeat 0 29px;
+	}
+#rightPan ul{
+	width:550px; display:block; margin:0 0 0 25px; height:29px; font-size:0;
+	}
+#rightPan ul li{
+	float:left;  height:29px; 
+	}
+#rightPan ul li a{
+	font:12px/29px Arial, Helvetica, sans-serif; font-weight:bold; height:29px; display:block; color:#FFF9F2;
+	background:url(../images/navi_bg.gif) repeat-x 0 0 #005050; text-decoration:none; text-align:center;
+	}
+#rightPan ul li a.main{
+	background:url(../images/home.gif) no-repeat 0 0; width:59px;
+	}
+#rightPan ul li a.main:hover{
+	background:url(../images/home_h.gif) no-repeat 0 0; width:59px;
+	}
+#rightPan ul li a.home{
+	background:url(../images/about_us.gif) no-repeat 0 0; width:74px;
+	}
+#rightPan ul li a.home:hover{
+	background:url(../images/about_us_h.gif) no-repeat 0 0; width:74px;
+	}
+#rightPan ul li a.sub{
+	background:url(../images/submission.gif) no-repeat 0 0; width:92px;
+	}
+#rightPan ul li a.sub:hover{
+	background:url(../images/submission_h.gif) no-repeat 0 0; width:92px;
+	}
+#rightPan ul li a.con{
+	background:url(../images/contact_us.gif) no-repeat 0 0; width:74px;
+	}
+#rightPan ul li a.con:hover{
+	background:url(../images/contact_us_h.gif) no-repeat 0 0; width:74px;
+	}
+#rightPan ul.link{
+	width:590px; display:block; margin:23px 0 0 0; height:20px;
+	}
+#rightPan ul.link li{
+	float:left;   width:102px; font-size:0px; display:block; padding:0 0 0 96px; height:20px;
+	}
+#rightPan ul.link li.sup{
+	float:left;   width:96px; font-size:0px; display:block; padding:0 0 0 102px; height:20px; margin:0;
+	}
+#rightPan ul.link li.sol{
+	float:left;   width:122px;  display:block; padding:0 0 0 55px; height:20px;
+	}
+#rightPan ul.link li a{
+	font:20px/20px Arial, Helvetica, sans-serif; text-transform:uppercase; color:#AA855B ; font-weight:normal; 
+	background-color:#FFF9F2; background-image:none;  display:block; width:104px; text-align:right; height:20px;
+	}
+#rightPan ul.link li a:hover{
+	color:#5A3000; background-color:#FFF9F2; padding:0; margin:0;
+	}
+#rightPan ul.sub_link{
+	width:590px; display:block; margin:0px 0 0 0; height:14px; padding:0;
+	}
+#rightPan ul.sub_link li{
+	float:left;  width:104px; font-size:0px; display:block; padding:0 0 0 94px; height:14px; margin:0;
+	}
+#rightPan ul.sub_link li.sup1{
+	float:left;   width:96px; font-size:0px; display:block; padding:0 0 0 102px; height:inherit;
+	}
+#rightPan ul.sub_link li.sol1{
+	float:left;   width:112px; font-size:0px; display:block; padding:0 0 0 65px; 
+	}
+#rightPan ul.sub_link li a{
+	font:14px/14px Arial, Helvetica, sans-serif; color:#353535; font-weight:normal; 
+	background-color:#FFF9F2; background-image:none;  display:block; width:104px; text-align:right; height:14px;
+	}
+#rightPan ul.sub_link li a:hover{
+	color:#5A3000; background-color:#FFF9F2; padding:0; margin:0; text-decoration:underline;
+	}
+#rightPan h2{
+	width:214px; display:block; font:18px/18px Arial, Helvetica, sans-serif; color:#000000; text-transform:uppercase;
+	margin:175px 0 0 10px; padding:0px 0 0 0; height:29px; background-color:#FFF9F2;
+	}
+#rightPan P{
+	width:570px; font:14px/19px Arial, Helvetica, sans-serif; color:#4D371E; font-weight:normal; display:block;
+	margin:0 0 20px 10px; background-color:#FFF9F2;
+	}
+#rightPan P a{
+	width:32px; background:url(../images/more_arrow.gif) no-repeat 0 0 #FFF9F2; color:#333227; margin:0 0 0 520px; height:16px;
+	font:12px/14px Arial, Helvetica, sans-serif; text-decoration:none; font-weight:bold; display:block; padding:0 0 0 23px
+	}
+#rightPan P a:hover{
+	color:#C01F0B; background:url(../images/button_arrow.gif) no-repeat 0 0 #FFF9F2; width:32px;
+	}
+#rightLeft{
+	width:186px; float:left; margin:0 0 45px 10px;
+	}
+#rightLeft h2{
+	width:169px; height:39px; display:block; color:#FFFFFF; font:12px/14px Arial, Helvetica, sans-serif; font-weight:bold;
+	background:url(../images/h2_bg.gif) no-repeat 11px 143px #006666; padding:11px 0 0 17px; margin:0 0 18px 0; text-transform:none;
+	}
+#rightLeft ul{
+	width:186px; margin:0 0 15px 0px; padding:0; display:block;
+	}
+#rightLeft ul li{
+	border-bottom:#C9B884 1px dashed; padding:0; margin:0; display:block; height:48px; font-size:0;
+	}
+#rightLeft ul li.noborder{
+	border-bottom:none; padding:0; margin:0; display:block; height:48px; font-size:0;
+	}
+#rightLeft ul li a{
+	font:13px/14px Arial, Helvetica, sans-serif; color:#4D371E; margin:3px 0 6px 0; padding:0; display:block;
+	 background-image:none;	background-color:#FFF9F2; text-align:left; font-weight:normal; width:177px;
+	}
+#rightLeft a.more{
+	width:32px; background:url(../images/more_arrow1.gif) no-repeat 0 0 #FFF9F2; color:#333227; margin:0 0 0 0px; height:16px;
+	font:12px/14px Arial, Helvetica, sans-serif; text-decoration:none; font-weight:bold; display:block; padding:0 0 0 23px;
+	float:right;
+	}
+#rightLeft a.more:hover{
+	color:#C01F0B; background:url(../images/more_arrow2.gif) no-repeat 0 0 #FFF9F2; width:32px;
+	}
+#rightRight{
+	width:362px; float:left; margin:0 0 0 20px;
+	}	
+#rightRight h2{
+	width:197px; height:39px; background:url(../images/h2_bg1.gif) no-repeat 303px 9px #EFBA00; text-transform:none;
+	 font:12px/14px Arial, Helvetica, sans-serif; color:#FFFFFF; display:block; padding:11px 150px 0 15px;
+	  margin:0 0 18px 0; font-weight:bold;
+	}
+#rightRight ul{
+	width:362px; margin:0 0 15px 0px; padding:0; display:block;
+	}
+#rightRight ul li{
+	border-bottom:#C9B884 1px dashed; padding:0; margin:0; display:block; height:52px; font-size:0;
+	}
+#rightRight ul li.noborder1{
+	border-bottom:none; padding:0; margin:0; display:block; height:48px; font-size:0;
+	}
+#rightRight ul li a{
+	font:13px/14px Arial, Helvetica, sans-serif; color:#4D371E; margin:3px 0 6px 0; padding:0; display:block;
+	 background-image:none;	background-color:#FFF9F2; text-align:left; font-weight:normal; width:351px;
+	}
+#rightRight ul li a b{
+	margin:0 200px 0 0;
+	}
+#rightRight a.more1{
+	width:32px; background:url(../images/more_arrow2.gif) no-repeat 0 0 #FFF9F2; color:#333227; margin:0 0 0 0px; height:16px;
+	font:12px/14px Arial, Helvetica, sans-serif; text-decoration:none; font-weight:bold; display:block; padding:0 0 0 23px;
+	float:right;
+	}
+#rightRight a.more1:hover{
+	color:#C01F0B; background:url(../images/more_arrow1.gif) no-repeat 0 0 #FFF9F2; width:32px;
+	}
+/*---------------------------footer-------------------*/
+#footer_bg{
+	background:url(../images/footer_bg.gif) repeat-x; width:100%; margin:0  auto 0 auto; float:left; height:153px;
+	}
+#footer{
+	width:525px; margin:0 auto 0 auto; 
+	}
+#footer ul{
+	width:525px; margin:29px 0 7px 0; display:block; height:15px;
+	}
+#footer ul li{
+	float:left; font:12px/14px 'Trebuchet MS', Arial, Helvetica, sans-serif; color:#FFFFFF; background-color:#6B6854;
+	display:block; 
+	}
+#footer ul li a{
+	font:12px/14px 'Trebuchet MS', Arial, Helvetica, sans-serif; color:#FFFFFF; background-color:#6B6854; text-decoration:none;
+	margin:0 10px 0 10px;
+	}
+#footer ul li a:hover{
+	text-decoration:underline;
+	}
+#footer p{
+	width:188px; margin:0 0 0 162px; font:12px/14px 'Trebuchet MS', Arial, Helvetica, sans-serif; color:#F3F1DF;
+	background-color:#6B6854
+	}
+#footer ul.xhtml{
+	width:135px; display:block; margin:12px 0 0 197px; height:21px; font-size:0px;
+	}
+#footer ul.xhtml li{
+	float:left; height:21px; margin-right:9px;
+	}
+#footer ul.xhtml li a{
+	text-indent:-2000px; display:block; height:21px; margin:0; padding:0; font-size:0px;
+	}
+#footer ul.xhtml li a.xht{
+	background:url(../images/xhtml.gif) no-repeat 0 0 #6B6854; color:#fff; width:66px;
+	}
+#footer ul.xhtml li a.css{
+	background:url(../images/css.gif) no-repeat 0 0 #6B6854; color:#fff; width:50px;
+	}

@@ -38,5 +38,7 @@ module Konkursy
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+
+    #config.action_view.JavaScript_expansions[:defaults] = %w(jquery rails application)  
   end
 end

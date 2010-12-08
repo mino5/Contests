@@ -1,0 +1,3 @@
+$("#comments-notice").html('<div class="flash notice"><%= escape_javascript(flash.delete(:notice)) %></div>');
+$('#comment_<%= @comment.id %>').fadeOut(); // znikający komentarz
+$("#comments_count").html("<%= @comments.count %> komentarzy "); // uaktualniamy ilość

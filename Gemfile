@@ -5,8 +5,9 @@ gem 'rails', '3.0.0'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+gem 'ruby-debug'
 gem 'mysql'
-
+gem 'jquery-rails'
 gem 'haml'
 gem 'heroku'
 

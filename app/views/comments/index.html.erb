@@ -1,0 +1,18 @@
+<span id="comments_count"><%= @comments.count %> komentarzy </span>
+<div id="comments">
+  <%= render :partial => @comments, :locals => { :list => true } %>
+</div>
+
+<hr />
+
+<div id="comments-notice">
+</div>
+
+<h2>Skomentuj</h2>
+<%= form_for Comment.new, :remote => true do |f| %>
+	<%= f.label :name, "Nick" %><br />
+	<%= f.text_field :name %><br />
+	<%= f.label :body, "Komentarz" %><br />
+	<%= f.text_area :body, :rows => 8 %><br />
+	<%= f.submit "Dodaj" %>
+<% end %>

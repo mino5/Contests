@@ -83,5 +83,17 @@
 	height: 1%;
 }
 
+
+
 div#user_nav { float: right; font-size: 0.9em; }
+
+body{background:#534741;font-family:Arial, Helvetica, sans-serif; font-size:12px;}
+ul, li{margin:0; padding:0; list-style:none;}
+
+.dateandoptions
+{
+float:right;
+color:gray;
+text-align:right;
+}
 
