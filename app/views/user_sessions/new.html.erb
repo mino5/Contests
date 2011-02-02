@@ -1,16 +1,22 @@
-<b> Login </b>
+<h2><b> Logowanie</b></h2>
+<br>
 <% form_for @user_session do |form| %>
-  <li>
-    <%= form.label :username, "Username" %>
+  
+    <%= form.label :username, "Nazwa użytkownika" %>
+    <br>
     <%= form.text_field :username %>
-  </li>
-  <li>
-    <%= form.label :password, "Password" %>
+    <br>
+    <br>
+    <%= form.label :password, "Hasło" %>
+    <br>
     <%= form.password_field :password %>
-  </li>
-  <li>
-    <%= form.submit "Submit" %>
-  </li>
+    <br>
+    <%= form.check_box :remember_me %><%= form.label :zapamiętaj_mnie %><br />
+    <br>
+    <br>
+    <%= form.submit "Zaloguj" %>
+    &nbsp;
+    <%= link_to "Zarejestruj", new_user_path %>
 <% end %>
 
 

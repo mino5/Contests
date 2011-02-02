@@ -1,23 +1,22 @@
 <% form_for @user do |form| %>
-  <li>
-    <%= form.label :username, "Username" %>
+    <br>
+    <%= form.label :username, "Nazwa użytkownika" %>
+    <br>
     <%= form.text_field :username %>
-  </li>
-  <li>
-    <%= form.label :email, "Email" %>
+    <br><br>
+    <%= form.label :email, "E-mail" %> 
+    <br>
     <%= form.text_field :email %>
-  </li>
-  <li>
-    <%= form.label :password, "Password" %>
+    <br><br>
+    <%= form.label :password, "Hasło" %>
+    <br>
     <%= form.password_field :password %>
-  </li>
-  <li>
-    <%= form.label :password_confirmation, "Password confirmation" %>
+    <br><br>
+    <%= form.label :password_confirmation, "Potwierdzenie hasła" %>
+    <br>
     <%= form.password_field :password_confirmation %>
-  </li>
-  <li>
-    <%= form.submit "Submit" %>
-  </li>
-</ol>
+    <br><br>	
+    <%= form.submit "Zarejestruj" %>
+    <br>
 <% end %>
 
