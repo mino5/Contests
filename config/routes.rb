@@ -1,9 +1,8 @@
 Konkursy::Application.routes.draw do
-  resources :comments
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
-
+  
   resources :users do
     resources :invitations do 
     member do 
@@ -19,6 +18,16 @@ Konkursy::Application.routes.draw do
      end
   end
   
+ resources :articles do
+     resources :comments
+ end
+
+namespace :admin do
+       resources :users
+       resources :comments
+       resources :articles
+       root :to => "admin#index"
+     end
   
   match 'login' => 'user_sessions#new'
   match 'logout' => 'user_sessions#destroy'

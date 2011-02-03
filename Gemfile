@@ -12,8 +12,8 @@ gem 'haml'
 gem 'heroku'
 
 gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', :branch => 'rails3'
-gem 'will_paginate', :git => 'https://github.com/mislav/will_paginate.git'
-#gem 'meta_search', :git => 'git://github.com/ernie/meta_search.git'
+gem 'will_paginate', "3.0.pre"
+gem 'meta_search'
 
 group :test, :development do
    gem 'rspec-rails', '~>2.0.1'

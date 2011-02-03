@@ -32,7 +32,7 @@ body
 {
 background-color: #fff;
 color: #585858;
-font-size: 9pt;
+font-size: 10pt;
 font-family: "trebuchet ms", helvetica, sans-serif;
 }
 
@@ -40,7 +40,6 @@ h1,h2,h3,h4,h5,h6
 {
 font-weight: normal;
 letter-spacing: -1px;
-text-transform: lowercase;
 }
 
 h3,h4,h5,h6
@@ -84,13 +83,13 @@ margin-top: 0.5em;
 
 a
 {
-text-decoration: underline;
-color: #F16C00;
+text-decoration: none;
+color: #184366;
 }
 
 a:hover
 {
-text-decoration: none;
+text-decoration: underline;
 }
 
 ul.links
@@ -185,6 +184,7 @@ text-transform: lowercase;
 text-decoration: none;
 }
 
+
 #menu li a.active
 {
 background: #FF790B url('images_blue/n3.gif') repeat-x;
@@ -220,8 +220,8 @@ padding-top: 3.5em;
 
 #main_inner h3,h4
 {
-border-bottom: dotted 1px #E1E1E1;
 position: relative;
+border-bottom: dotted 1px #E1E1E1;
 }
 
 #main_inner h3
@@ -248,7 +248,7 @@ position: relative;
 {
 position: relative;
 font-size: 1.7em;
-padding-bottom: 1.2em;
+padding-bottom: 0.3em;
 }
 
 #main_inner .post ul.post_info

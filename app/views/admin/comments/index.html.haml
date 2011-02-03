@@ -1,0 +1,16 @@
+%h2 Komentarze
+
+- @comments.each do |comment|
+  %p
+    %b= comment.body
+  %p
+
+  = link_to "Edit", edit_admin_comment_path(comment)
+  = button_to "Delete", admin_comment_path(comment), :method=>:delete, :class=>:destroy,:confirm=>"Are you sure?" 
+
+  %hr
+
+  = will_paginate @comments
+
+%p= link_to 'Back', admin_root_path
+

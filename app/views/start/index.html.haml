@@ -1,1 +1,13 @@
-= link_to "Comments (#{Comment.all.size.to_s()})", comments_path
+- if !@articles.empty?
+- @articles.each do |article|
+    %h3= link_to article.title, article_path(article)
+    %ul.post_info
+        %li.date #{article.created_at}
+        %li.comments #{Comment.all.size.to_s()}
+    %img{:src => "/images/pic.gif", :class => "floatTL" }/
+    %p= article.body
+   
+
+
+    
+

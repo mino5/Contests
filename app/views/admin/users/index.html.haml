@@ -1,0 +1,16 @@
+%h2 Użytkownicy
+
+- @users.each do |user|
+  %p
+    %b= user.username
+  %p
+
+  = link_to "Edit", edit_admin_user_path(user)
+  = button_to "Delete", admin_user_path(user), :method=>:delete, :class=>:destroy,:confirm=>"Are you sure?" 
+
+  %hr
+
+  = will_paginate @users
+
+%p= link_to 'Back', admin_root_path
+

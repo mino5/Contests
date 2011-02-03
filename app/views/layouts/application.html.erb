@@ -23,14 +23,25 @@
 		
 		<div id="menu">
 			<ul>
+				<% current_uri = request.env['PATH_INFO'] %>
+				<% if current_uri == "/" %>
 				<li><a href="/" class="active">Główna</a></li>
+				<% else %>
+				<li><a href="/">Główna</a></li>
+                                <% end %>
 				<li><a href="#">O stronie</a></li>
 				<li><a href="#">Zgłoś konkurs</a></li>
 				<li><a href="#">Kontakt</a></li>	
 				<% if current_user %>
 				<li><%= link_to "Wyloguj", logout_path %></li>
+				<% end %>
+
+				<% if !current_user %>
+				<% if current_uri == "/login" %>
+				<li><a href= "<% login_path %>" class="active">Zaloguj</li></a>
 				<% else %>
     				<li><%= link_to "Zaloguj", login_path %></li>
+				<% end %>
 				<% end %>
 			</ul>
 		</div>
@@ -45,26 +56,10 @@
 		<div id="primaryContent_3columns">
 
 			<div id="columnA_3columns">
-		
-				<h3>Nowa strona o konkursach internetowych!</h3>
-				<img src="/images/pic.jpg" width=25% height=25% class="floatTL" alt="Kostka" />
-
-				<p>
-					Witam na stronie o różnych konkursach internetowych!
-				</p>
-				
-				<p>
-					Zachęcam do komentowania i dodawania nowych konkursów!
-				</p>
-				
-				
-				<br class="clear" />
-			
-				<div class="post">
-				
+			        
+                                 <div class="post" />
 					<%= yield %>
-
-				</div>
+                                 </div>
 		
 			</div>
 	
