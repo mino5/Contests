@@ -29,7 +29,7 @@ layout 'admin'
   def update
    require_admin
    article = Article.find(params[:id])
-   article.update_attributes(params[:user])
+   article.update_attributes(params[:article])
    redirect_to admin_articles_path
   end
  

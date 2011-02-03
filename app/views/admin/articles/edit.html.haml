@@ -1,4 +1,7 @@
-- form_for ([:admin, @article]) do |f|
+- form_for ([:admin, @article], :html => { :multipart => true }) do |f|
   = errors_for(@article, "Opps, unable to add new article").html_safe
   = render :partial => "form", :locals => {:f => f}
   = f.submit "Zapisz artykuł"
+
+
+

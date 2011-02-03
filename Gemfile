@@ -10,7 +10,7 @@ gem 'mysql'
 gem 'jquery-rails'
 gem 'haml'
 gem 'heroku'
-
+gem 'paperclip'
 gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', :branch => 'rails3'
 gem 'will_paginate', "3.0.pre"
 gem 'meta_search'
