@@ -1,0 +1,5 @@
+<%= form_for ([@article, @article.comments.new], :remote => true, :html => {:id => 'new_comment'}) do |f| %>
+	<%= f.label :body, "Komentarz" %><br />
+	<%= f.text_area :body, :rows => 8 %><br />
+	<%= f.submit "Dodaj" %>
+<% end %>

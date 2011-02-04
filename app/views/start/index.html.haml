@@ -4,7 +4,7 @@
         %h3= link_to article.title, article_path(article)
         %ul.post_info
             %li.date #{article.created_at}
-            %li.comments #{Comment.all.size.to_s()}
+            %li.comments= article.comments.size.to_s()
         %img{:src => article.avatar.url(:thumb), :class => "floatTL" }/
         %p= article.body
 

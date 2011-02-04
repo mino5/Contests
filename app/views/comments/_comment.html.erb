@@ -1,9 +1,14 @@
- <%= div_for comment do %>
+ <%= div_for (comment, :html => {:multipart => true}, :remote => true)  do %>
  <span class="dateandoptions">
     Skomentowano <%=time_ago_in_words(comment.created_at)%> temu<br />
   </span>
 	<p><b><%= comment.name %></b> napisał:</p>
 	<br />
   <%= content_tag(:p, comment.body, :class => "comment-body") %>
-  <%= button_to 'Usuń', comment_path(comment), :method => :delete, :class => "delete", :remote => true  %>
+  <img src= <%= User.find(comment.user_id).avatar.url(:thumb) %> class="floatTC" />
+ <% if current_user %>
+ <% if current_user.is_admin == true %> 
+ <%= button_to 'Usuń', comment_path(comment), :method => :delete, :class => "delete", :remote => true  %>
+ <% end %>
+ <% end %>
 <% end %>	

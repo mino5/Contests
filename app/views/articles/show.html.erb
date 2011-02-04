@@ -1,0 +1,20 @@
+<h1> <span> <%= @article.title %> </span> </h2>
+
+<div id="comments-count">
+<h4> <span> <%= @article.comments.size.to_s() %> </span> KOMENTARZY </h4>
+</div>
+
+<img src= <%= @article.avatar.url(:medium) %> class="floatTC" />
+
+<h4> <p> <%= @article.body %> </p> </h4>
+
+<h4> <span> Komentarze: </span> </h4>
+
+<div id="comments"><%= render @article.comments %></div>
+<p>
+   <%= link_to 'Skomentuj',
+      new_article_comment_path(@article, :format => :js),
+      :remote => true, :id => 'new_comment_link' %>
+</p>
+
+

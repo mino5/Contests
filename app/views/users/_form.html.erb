@@ -1,4 +1,4 @@
-<% form_for @user do |form| %>
+<% form_for (@user, :html => {:multipart => true }) do |form| %>
     <br>
     <%= form.label :username, "Nazwa użytkownika" %>
     <br>
@@ -15,7 +15,11 @@
     <%= form.label :password_confirmation, "Potwierdzenie hasła" %>
     <br>
     <%= form.password_field :password_confirmation %>
-    <br><br>	
+    <br>
+    <%= form.label :avatar, "Avatar" %>
+    <br>
+    <%= form.file_field :avatar %>
+    <br><br>
     <%= form.submit "Zarejestruj" %>
     <br>
 <% end %>

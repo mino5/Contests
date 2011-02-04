@@ -70,11 +70,16 @@ h1,h2,h3,h4,h5,h6
 font-weight: normal;
 letter-spacing: -1px;
 }
+h1
+{
+border-bottom: solid 1px #E1E1E1;
+}
 
-h3,h4,h5,h6
+h3,h5,h6
 {
 color: #184366;
 }
+
 
 h1 span
 {
@@ -108,6 +113,15 @@ float: left;
 margin-right: 1.5em;
 margin-bottom: 1.5em;
 margin-top: 0.5em;
+}
+
+img.floatTC
+{
+margin-top: 2em; 
+display: block;   
+margin-left: auto;   
+margin-right: auto;
+margin-bottom: 3em;
 }
 
 a
@@ -170,6 +184,7 @@ bottom: 0.6em;
 display: inline;
 color: #fff;
 font-size: 2.6em;
+border-bottom: 0px;
 }
 
 #logo h2
@@ -272,6 +287,7 @@ margin-top: 0.95em;
 position: relative;
 border-top: dotted 1px #E1E1E1;
 margin-top: 0.5em;
+min-height: 240px;
 }
 
 #main_inner .post h3

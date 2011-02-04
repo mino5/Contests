@@ -17,6 +17,8 @@ Konkursy::Application.routes.draw do
       post :invite
      end
   end
+
+ resources :comments
   
  resources :articles do
      resources :comments
