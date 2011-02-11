@@ -57,6 +57,115 @@ DIV.pagination .current {
 }
 
 
+/* Float Properties*/
+
+.clearfloat:after {
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+	}
+
+.clearfloat {
+	display: inline-block;
+	}
+
+
+/* Comments*/
+
+.commentlist cite {
+	font-style:normal;
+	margin-bottom:4px;
+	display:block;
+	}	
+
+.commentlist blockquote {
+	background:#ededed;
+	}
+			
+.commentlist li {
+	padding: 10px 0px 10px 0px;
+	list-style:none;
+	margin-bottom:3px;
+	}
+
+.commentlist li li {
+	background:none;
+	border:none;
+	list-style:square;
+	margin:3px 0 3px 20px;
+	padding:3px 0;
+	}
+
+.commenttext {
+	padding: 10px 10px 0px 10px;
+	background:#f2f2f2;
+	border-top:1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	width:425px;
+	float:right;
+
+	}
+		
+.commentlist cite strong {
+	font-size:1.1em;
+	}
+	
+li.my_comment {
+	background: #FFF;
+	border:none;
+	}
+
+li.my_comment cite strong {
+	font-size: 1.3em;
+	color:#313228;
+	}
+	
+#commentform small {
+	background:#FFF;
+	font-weight:bold;
+	padding:0;
+	}
+	
+.commentmetadata {
+	color:#4d4d4d;
+	display: block;
+	margin-top:3px;
+	text-align:right;
+	font-size:0.9em;
+	}
+
+.commentmetadata a, .commentmetadata a:visited {
+	color:#959382;
+	}
+	
+.commentlist small {
+	background:#e9e9e9;
+	}
+
+.avatar {
+	border:1px solid #bbb;
+	margin:0px 10px 0px 0px;
+	float:left;
+	padding:2px;
+	width:55px;
+	height:55px;
+	}	
+
+/* Hides from IE-mac \*/
+* html .clearfloat {
+	height:1%;
+	}
+
+*+html .clearfloat {
+	height:1%;
+	}
+
+.clearfloat {
+	display:block;
+	}
+
 body
 {
 background-color: #fff;
@@ -400,7 +509,7 @@ max-width: 2.5em;
 	#primaryContent_3columns
 	{
 	position: relative;
-	margin-right: 34em;
+	margin-right: 36em;
 	}
 	
 	#columnA_3columns
@@ -408,7 +517,7 @@ max-width: 2.5em;
 	position: relative;
 	float: left;
 	width: 100%;
-	margin-right: -34em;
+	margin-right: -32em;
 	padding-right: 2em;
 	}
 	
@@ -421,7 +530,7 @@ max-width: 2.5em;
 	
 	#columnB_3columns
 	{
-	width: 13.0em;
+	width: 14.0em;
 	float: left;
 	padding: 0em 2em 0.5em 2em;
 	border-left: dotted 1px #E1E1E1;
@@ -429,7 +538,7 @@ max-width: 2.5em;
 	
 	#columnC_3columns
 	{
-	width: 13.0em;
+	width: 14.0em;
 	float: left;
 	padding: 0em 0em 0.5em 2em;
 	border-left: dotted 1px #E1E1E1;

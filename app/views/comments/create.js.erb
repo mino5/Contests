@@ -1,8 +1,8 @@
-$("#comments-notice").html('<div class="flash notice"><%= escape_javascript(flash.delete(:notice)) %></div>');
-$("#comments").append("<%= escape_javascript(render(@comment)) %>"); // render
+$("#commentlist").append("<%= escape_javascript(render(@comment)) %>"); // render
 $('#comment_<%= @comment.id %>').slideUp(0).fadeIn(1000); //hack - z niewiadomych przyczyn samo FadeIn nie działa...
 $("#new_comment")[0].reset(); // reset form
 $("#comments-count").html('<h4> <span> <%= @article.comments.size.to_s() %> </span> KOMENTARZY </h4>');
+$("#comments-notice").html('<div class="flash notice"><%= escape_javascript(flash.delete(:notice)) %></div>');
 
   
 

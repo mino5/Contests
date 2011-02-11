@@ -36,8 +36,8 @@ class CommentsController < ApplicationController
       @article = Article.find(@comment.article_id)
       @comment.destroy
       respond_to do |format|
+	 format.js
          format.html { redirect_to article_comments_path }
-         format.js
        end
     end
 

@@ -1,5 +1,6 @@
-$("#comments-notice").html('<div class="flash notice"><%= escape_javascript(flash.delete(:notice)) %></div>');
+$("#comments-count").html('<h4> <span> <%= @article.comments.size.to_s() %> </span> KOMENTARZY </h4>');
 $('#comment_<%= @comment.id %>').fadeOut(); // znikający komentarz
 $("#new_comment")[0].reset(); // reset form
-$("#comments-count").html('<h4> <span> <%= @article.comments.size.to_s() %> </span> KOMENTARZY </h4>');
+$("#comments-notice").html('<div class="flash notice"><%= escape_javascript(flash.delete(:notice)) %></div>');
+
 

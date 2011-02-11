@@ -9,12 +9,17 @@
 <h4> <p> <%= @article.body %> </p> </h4>
 
 <h4> <span> Komentarze: </span> </h4>
+<div id="comments">
+<ul class="commentlist">
+	<div id="commentlist"><%= render @article.comments %></div>
+</ul>
 
-<div id="comments"><%= render @article.comments %></div>
 <p>
+   <% if current_user %>
    <%= link_to 'Skomentuj',
       new_article_comment_path(@article, :format => :js),
       :remote => true, :id => 'new_comment_link' %>
+   <% end %>
 </p>
-
+</div>
 
