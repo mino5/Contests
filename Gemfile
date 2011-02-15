@@ -10,11 +10,10 @@ gem 'mysql'
 gem 'jquery-rails'
 gem 'haml'
 gem 'heroku'
-gem 'paperclip'
+gem "paperclip", "~> 2.3"
 gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', :branch => 'rails3'
 gem 'will_paginate', "3.0.pre"
-gem 'meta_search'
-
+gem "meta_search"
 group :test, :development do
    gem 'rspec-rails', '~>2.0.1'
    gem 'capybara', '>= 0.3.9'

@@ -1,0 +1,19 @@
+<% if !@articles.empty? %>
+<% @articles.each do |article| %>
+    <div class="post">
+        <h3><%= link_to article.title, article_path(article) %></h3>
+        <ul class="post_info">
+            <li class="date"> <%= article.created_at %></li>
+            <li class="comments"><%= article.comments.size.to_s() %></li>
+        </ul>
+        <img src= <%= article.avatar.url(:thumb) %> class="floatTL" />
+        <p> <%= article.body %> <br />
+	<% if article.dowygrania? %> 
+        W konkursie do wygrania: 
+        <%= article.dowygrania %> </p>
+        <% end %>
+    </div>
+<% end %>
+<% end %>
+<%= will_paginate @articles %>
+

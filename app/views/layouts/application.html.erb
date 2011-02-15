@@ -29,12 +29,24 @@
 				<% else %>
 				<li><a href="/">Główna</a></li>
                                 <% end %>
-				<li><a href="#">O stronie</a></li>
-				<li><a href="#">Zgłoś konkurs</a></li>
-				<li><a href="#">Kontakt</a></li>	
-				<% if current_user %>
+				<% if current_uri == "/about" %>
+				<li><a href="/about/" class="active">O stronie</a></li>
+				<% else %>
+				<li><a href="/about/">O stronie</a></li>
+                                <% end %>
+				<% if current_user %>				
+				<% if current_uri == "/users/" + current_user.id.to_s() + "/messages/new"   %>
+				<li><a href="<% new_user_message_path(current_user) %>" class="active">Zgłoś konkurs / kontakt</a></li>	
+				<% else %>
+				<li><%= link_to "Zgłoś konkurs / kontakt", new_user_message_path(current_user) %> </li>
+				<% end %>
+				
+				<% if current_uri == "/users/" + current_user.id.to_s() %>
+				<li><a href= "<% user_path(current_user) %>" class="active">Mój profil</li></a>
+				<% else %>
+				<li><%= link_to "Mój profil", user_path(current_user) %> </li>
+				<% end %>
 				<li><%= link_to "Wyloguj", logout_path %></li>
-                                <li><%= link_to "Mój profil", user_path(current_user) %> </li>
 				<% end %>
 
 				<% if !current_user %>
@@ -61,22 +73,29 @@
 				
 		
 			</div>
+
+
 	
 		</div>
 		
 		<div id="secondaryContent_3columns">
 		
 			<div id="columnB_3columns">
-		
-				<h4><span>Search</span></h4>
+				<% current_uri = request.env['PATH_INFO'] %>
+				<% if current_uri == "/" %>
+				<h4><span>Wyszukaj</span></h4>
 				
 				<form method="post" action="">
 				<div id="search">
-					<input type="text" class="text" name="keywords" />
+ 					<%= yield :search %>
+					<% form_for :search, @search, :html => {:method => :get} do |f| %>
+					<%= f.text_field :body_contains, :class => 'text' %>
 					<input type="submit" class="button" value="Go" />
-					<br class="clear" />
+					<% end %>
+				<br class="clear" />
 				</div>
 				</form>
+ 				<% end %>
 				
 				<h4><span>About</span> Me</h4>
 				<p><strong>Veroeros sed</strong> varius sollici, arcu. Vivamus et viverra. tor. Aenean felis. Quisque eros. <a href="#">Lorem ipsum dolor</a>.</p>

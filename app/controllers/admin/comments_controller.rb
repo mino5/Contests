@@ -17,9 +17,13 @@ def index
 
   def update
    require_admin
-   comment = Comment.find(params[:id])
-   comment.update_attributes(params[:user])
-   redirect_to admin_comments_path
+   @comment = Comment.find(params[:id])
+   if @comment.update_attributes(params[:comment])
+      flash[:notice] = "Successfully updated profile."
+      redirect_to admin_comments_path
+    else
+      render :action => "edit"
+    end
   end
  
   def destroy

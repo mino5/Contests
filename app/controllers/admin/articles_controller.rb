@@ -28,9 +28,13 @@ layout 'admin'
 
   def update
    require_admin
-   article = Article.find(params[:id])
-   article.update_attributes(params[:article])
-   redirect_to admin_articles_path
+   @article = Article.find(params[:id])
+   if @article.update_attributes(params[:article])
+      flash[:notice] = "Successfully updated profile."
+      redirect_to admin_articles_path
+    else
+      render :action => "edit"
+    end
   end
  
   def destroy

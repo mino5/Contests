@@ -1,0 +1,16 @@
+<%= render :partial => 'shared/my_custom_flash', :flash => flash %>
+<% form_for (@message) do |form| %>
+    <%= render "shared/error_messages", :target => @message %>  
+    <br>
+    <%= form.label :subject, "Tytuł" %>
+    <br>
+    <%= form.text_field :subject %>
+    <br><br>
+    <%= form.label :message, "Treść" %>
+    <br>
+    <%= form.text_area :message %>
+    <br><br>
+    <%= form.submit "Wyślij" %>
+    <br>
+<% end %>
+

@@ -1,4 +1,6 @@
+<%= render :partial => 'shared/my_custom_flash', :flash => flash %>
 <% form_for (@user, :html => {:multipart => true }) do |form| %>
+    <%= render "shared/error_messages", :target => @user %>  
     <br>
     <%= form.label :username, "Nazwa użytkownika" %>
     <br>
@@ -20,7 +22,7 @@
     <br>
     <%= form.file_field :avatar %>
     <br><br>
-    <%= form.submit "Zarejestruj" %>
+    <%= form.submit @button_submit %>
     <br>
 <% end %>
 

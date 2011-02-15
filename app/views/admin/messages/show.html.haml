@@ -1,0 +1,12 @@
+%h3 Od użytkownika: 
+= link_to @user.username, user_path(@user)
+%br
+%br
+%h3 Temat: 
+= @message.subject
+%p
+%br
+%h3 Treść:
+
+%p= @message.message
+

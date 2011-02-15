@@ -22,7 +22,7 @@ class ApplicationController < ActionController::Base
    if current_user
    	if current_user.is_admin == false
 	    flash[:notice] = "Admin rights reqired"
-	      redirect_to account_url
+	      redirect_to root_path
      	 return false
         end   
    end

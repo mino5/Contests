@@ -6,9 +6,28 @@
 
 <img src= <%= @article.avatar.url(:medium) %> class="floatTC" />
 
-<h4> <p> <%= @article.body %> </p> </h4>
+<p> <%= @article.body %> </p>
 
+<% if @article.zadanie %>
+<h4> <b> Zadanie do wykonania: </b> </h4> </br>
+<p> <%= @article.zadanie %> </p>
+<% end %>
+
+<% if @article.dowygrania %>
+<h4> <b> W konkursie do wygrania: </b> </h4> </br>
+<p> <%= @article.dowygrania %> </p>
+<% end %>
+
+<% if @article.deadline %>
+<h4> <p> Konkurs kończy się: <b> <%= @article.deadline.to_date %> </b> </p> </h4>
+<% end %>
+
+<% if @article.site %>
+<a href="<%= @article.site.to_s()%>"> Przejdź do strony konkursu </a>
+<% end %>
+<% if @article.comments.size > 0 %>
 <h4> <span> Komentarze: </span> </h4>
+<% end %>
 <div id="comments">
 <ul class="commentlist">
 	<div id="commentlist"><%= render @article.comments %></div>

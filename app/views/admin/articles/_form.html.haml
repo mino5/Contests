@@ -1,11 +1,21 @@
-%p= f.label :user_id, "user_id"
-%p= f.text_field :user_id
+= render "shared/error_messages_admin", :target => @article
+= if @article.avatar?
+  %img{:src => @article.avatar.url(:thumb)}/
+
 %p= f.label :avatar, "avatar"
 %p= f.file_field :avatar
 %p= f.label :title, "Tytuł"
 %p= f.text_field :title
-%p= f.label :body, "Treść" 
+%p= f.label :body, "Treść, wstęp" 
 %p= f.text_area :body
+%p= f.label :zadanie, "Zadanie do wykonania"
+%p= f.text_area :zadanie
+%p= f.label :dowygrania, "Co jest do wygrania?"
+%p= f.text_area :dowygrania
+%p= f.label :deadline, "Deadline"
+%p= f.text_field :deadline
+%p= f.label :site, "Strona konkursu"
+%p= f.text_field :site
 
 
 

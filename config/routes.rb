@@ -9,6 +9,7 @@ Konkursy::Application.routes.draw do
      get :accept
     end
    end
+    resources :messages
   end
  
   resources :user_sessions
@@ -19,7 +20,8 @@ Konkursy::Application.routes.draw do
   end
 
  resources :comments
-  
+ resources :messages
+
  resources :articles do
      resources :comments
  end
@@ -28,6 +30,7 @@ namespace :admin do
        resources :users
        resources :comments
        resources :articles
+       resources :messages
        root :to => "admin#index"
      end
   
@@ -80,6 +83,7 @@ namespace :admin do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
    root :to => "start#index"
+   
 
   # See how all your routes lay out with "rake routes"
 

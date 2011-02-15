@@ -105,13 +105,19 @@ DIV.pagination .current {
 	border-bottom: 1px solid #ddd;
 	width:425px;
 	float:right;
-
+        word-wrap: break-word;
 	}
 		
 .commentlist cite strong {
 	font-size:1.1em;
 	}
 	
+#flash-notice
+{
+position:absolute;
+top:0px;
+width:100%;
+}
 li.my_comment {
 	background: #FFF;
 	border:none;
@@ -152,6 +158,97 @@ li.my_comment cite strong {
 	width:55px;
 	height:55px;
 	}	
+.avataredit {	
+	margin-left:100px;
+        border:1px solid #bbb;
+	float:center;
+   }
+.edit {
+	margin-top:25px;
+        float:center;
+	margin-left:100px;
+}
+
+.new {
+	margin-top:25px;
+}
+
+#ErrorExplanation {
+  margin-top: 10px;
+  width: 400px;
+  border: 2px solid #red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 0px;
+  background-color: #f0f0f0;
+  margin-left: -60px;
+  }
+
+#ErrorExplanationA {
+  margin-top: 10px;
+  width: 400px;
+  border: 2px solid #red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 0px;
+  background-color: #f0f0f0;
+  margin-left: 0px;
+  }
+#ErrorExplanationA h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: 5px;
+  background-color: #c00;
+  color: #fff;
+  }
+
+  #ErrorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: 5px;
+  background-color: #c00;
+  color: #fff;
+  }
+
+#ErrorExplanationA h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: 5px;
+  background-color: #c00;
+  color: #fff;
+  }
+
+
+  #ErrorExplanation p {
+  color: #333;
+  margin-bottom: 0px;
+  padding: 5px;
+  }
+
+#ErrorExplanationA p {
+  color: #333;
+  margin-bottom: 0px;
+  padding: 5px;
+  }
+
+  #ErrorExplanation ul li {
+  margin-left:15px;
+  font-size: 12px;
+  list-style: square;
+  }
+
+ #ErrorExplanationA ul li {
+  margin-left:15px;
+  font-size: 12px;
+  list-style: square;
+  }
+
 
 /* Hides from IE-mac \*/
 * html .clearfloat {
@@ -490,7 +587,7 @@ margin-bottom: 2.0em;
 position: absolute;
 top: 0em;
 left: 0em;
-width: 9.5em;
+width: 11.0em;
 }
 
 #search input.button

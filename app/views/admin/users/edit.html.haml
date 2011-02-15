@@ -1,5 +1,4 @@
 - form_for ([:admin, @user], :html => { :multipart => true }) do |f|
-  = errors_for(@user, "Opps, unable to add new user").html_safe
   = render :partial => "form", :locals => {:f => f}
   = f.submit "Zapisz użytkownika"
 

@@ -17,9 +17,13 @@ layout 'admin'
 
   def update
    require_admin
-   user = User.find(params[:id])
-   user.update_attributes(params[:user])
-   redirect_to admin_users_path
+   @user = User.find(params[:id])
+   if @user.update_attributes(params[:user])
+      flash[:notice] = "Successfully updated profile."
+      redirect_to admin_users_path
+    else
+      render :action => "edit"
+    end
   end
  
   def destroy

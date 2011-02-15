@@ -1,0 +1,16 @@
+%h2 Wiadomości
+
+- @messages.each do |message|
+  %p
+    %b= message.subject
+  %p
+
+  = link_to "Show", admin_message_path(message)
+  = button_to "Delete", admin_message_path(message), :method=>:delete, :class=>:destroy,:confirm=>"Are you sure?" 
+
+  %hr
+
+= will_paginate @messages
+
+%p= link_to 'Back', admin_root_path
+
