@@ -491,9 +491,15 @@ margin-top: 0.95em;
 #main_inner .post
 {
 position: relative;
+display:inline-block;
+clear:both;
 border-top: dotted 1px #E1E1E1;
 margin-top: 0.5em;
-min-height: 240px;
+}
+
+#main_inner .post p
+{
+margin-top:-1.75em;
 }
 
 #main_inner .post h3
@@ -506,17 +512,18 @@ padding-bottom: 0.3em;
 #main_inner .post img.floatTL
 {
 position:relative;
-float: left;
+float:left;
+clear:both;
 margin-right: 1.5em;
 margin-bottom: 1.5em;
-margin-top: 0.5em;
+margin-top: -2.5em;
 }
 
 #main_inner .post ul.post_info
 {
 list-style: none;
-position: absolute;
-top: 3em;
+top: -2.25em;
+position: relative;
 font-size: 0.8em;
 }
 
@@ -537,6 +544,73 @@ background-image: url('images_blue/n5.gif');
 {
 background-image: url('images_blue/n6.gif');
 margin-left: 1.1em;
+}
+
+
+
+#main_inner .postbok
+{
+position: relative;
+clear:both;
+border-bottom: dotted 1px #E1E1E1; 
+display:inline-block;
+margin-top: 0.0em;
+
+}
+
+#main_inner .postbok h3
+{
+position: relative;
+font-size: 1.7em;
+padding-bottom: 0.3em;
+}
+
+#main_inner .postbok img.floatTL
+{
+position:relative;
+margin-right: 1.5em;
+margin-bottom: 1.5em;
+margin-top: -2.5em;
+clear:both;
+float:left;
+}
+
+#main_inner .postbok ul.postbok_info
+{
+list-style: none;
+position: relative;
+top: -2.5em;
+font-size: 0.8em;
+}
+
+#main_inner .postbok ul.postbok_info li
+{
+background-position: 0em 0.2em;
+background-repeat: no-repeat;
+display: inline;
+padding-left: 18px;
+}
+
+#main_inner .postbok ul.postbok_info li.date
+{
+background-image: url('images_blue/n5.gif');
+}
+
+#main_inner .postbok ul.postbok_info li.comments
+{
+background-image: url('images_blue/n6.gif');
+margin-left: 1.1em;
+}
+
+.recent-comment
+{
+   border-bottom: dotted 1px #E1E1E1; 
+}
+
+.recent-comment a.comment-link {
+     text-decoration: none;
+     display:block;
+     padding: 8px;
 }
 
 
