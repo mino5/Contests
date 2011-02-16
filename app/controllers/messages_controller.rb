@@ -3,6 +3,8 @@ class MessagesController < ApplicationController
 def new
   require_user
   @message = Message.new
+  @articles_mostoften = Article.all(:order => "comments_count DESC")
+  @newest_comments = Comment.all(:order => "created_at DESC")
 end
 
 def create

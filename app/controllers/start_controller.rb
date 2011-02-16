@@ -9,6 +9,4 @@ def index
    @newest_comments = Comment.all(:order => "created_at DESC")
 end
 
-
-
 end

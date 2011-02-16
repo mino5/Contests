@@ -1,8 +1,6 @@
 <h1> <span> <%= @article.title %> </span> </h2>
 
-<div id="comments-count">
-<h4> <span> <%= @article.comments.size.to_s() %> </span> KOMENTARZY </h4>
-</div>
+<div id="comments_count"><h4><span> <%= @article.comments.count.to_s() %> </span> KOMENTARZY </h4></div>
 
 <img src= <%= @article.avatar.url(:medium) %> class="floatTC" />
 
@@ -30,6 +28,7 @@
 <% end %>
 <div id="comments">
 <ul class="commentlist">
+	<div id="commentlist"> </div>
 	<div id="commentlist"><%= render @article.comments %></div>
 </ul>
 
@@ -41,4 +40,5 @@
    <% end %>
 </p>
 </div>
+<%= render :partial => 'shared/sidebar' %>
 

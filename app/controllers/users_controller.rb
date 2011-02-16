@@ -12,11 +12,15 @@ class UsersController < ApplicationController
   def edit
     @user = current_user
     @button_submit = "Zapisz"
+    @articles_mostoften = Article.all(:order => "comments_count DESC")
+    @newest_comments = Comment.all(:order => "created_at DESC")
   end
   
   def show
     @user = current_user
     @button_submit = "Zapisz"
+    @articles_mostoften = Article.all(:order => "comments_count DESC")
+   @newest_comments = Comment.all(:order => "created_at DESC")
   end
 
   def invitations
@@ -36,6 +40,8 @@ class UsersController < ApplicationController
   end
 
   def update
+    @articles_mostoften = Article.all(:order => "comments_count DESC")
+    @newest_comments = Comment.all(:order => "created_at DESC")
     @user = current_user
     @button_submit = "Zapisz"
     if @user.update_attributes(params[:user])

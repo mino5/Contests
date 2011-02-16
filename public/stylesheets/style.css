@@ -159,6 +159,7 @@ li.my_comment cite strong {
 	height:55px;
 	}	
 .avataredit {	
+	position:relative;
 	margin-left:100px;
         border:1px solid #bbb;
 	float:center;

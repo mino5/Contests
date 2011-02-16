@@ -5,8 +5,7 @@ class CommentsController < ApplicationController
         @user = User.find(@comment.user_id)
      end
 
-     def index
-       
+     def index       
        article = Article.find(params[:article_id])
        @article = Article.find(params[:article_id])
        @comments = article.comments
@@ -24,8 +23,8 @@ class CommentsController < ApplicationController
        @comment = article.comments.create!(params[:comment])
        flash[:notice] = "Dzięki za komentarz!"
        respond_to do |format|
-         format.html { redirect_to article_comments_path } 
-         format.js
+         format.html { redirect_to article_comments_path }
+	 format.js 
        end
      end
   
@@ -36,8 +35,8 @@ class CommentsController < ApplicationController
       @article = Article.find(@comment.article_id)
       @comment.destroy
       respond_to do |format|
-	 format.js
          format.html { redirect_to article_comments_path }
+	 format.js
        end
     end
 
@@ -45,8 +44,8 @@ class CommentsController < ApplicationController
     @article = Article.find(params[:article_id])
     @comment = Comment.new
     respond_to do |format|
-      format.html # new.html.erb
       format.js
+      format.html # new.html.erb
    end
 end
 
